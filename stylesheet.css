@@ -175,17 +175,79 @@ header {
 
 #card {
 
-	width:310px;
-	height:190px;
-	background-color: #F00;
+	width:308px;
+	height:188px;
+	background-color: #F5F5F5;
+	border: 1px solid #000;
+	border-radius: 10px;
 
 	position: fixed;
 	z-index:500;
 	top:54px;
 	margin-left:-155px;
 	left:50%;
+	overflow:hidden;
 
 }
+
+
+
+#card #header {height:41px; width: 100%; 
+	box-sizing:border-box;
+	padding:5px;
+	border-bottom:1px solid #666;
+}
+
+#card input {
+
+	-webkit-appearance: none;
+
+}
+#card #cancel, #card #send {
+	
+	height:30px;
+	width:55px;
+
+	cursor: pointer;
+		
+	border:1px solid #000;
+	border-radius:3px;
+	box-shadow: inset 0px 1px 1px rgba(255,255,255,0.3), inset 0px -1px 1px rgba(0,0,0,0.3);;
+	box-sizing:border-box;
+	margin:0px; 
+	padding:4px 5px;
+	outline: none;
+
+	font-size: 10pt;
+	font-weight: 400;
+	color: #999;
+	text-shadow:0px -1px 1px rgba(0,0,0,0.8);
+	text-align: center;
+
+
+
+}
+
+#card #cancel {
+
+	float:left;
+}
+
+#card #send {
+
+	float:right;
+
+	background: #29c3ed; /* Old browsers */
+	background: -moz-linear-gradient(top, #29c3ed 30%, #0ab2e5 67%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#29c3ed), color-stop(67%,#0ab2e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #29c3ed 30%,#0ab2e5 67%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #29c3ed 30%,#0ab2e5 67%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #29c3ed 30%,#0ab2e5 67%); /* IE10+ */
+	background: linear-gradient(to bottom, #29c3ed 30%,#0ab2e5 67%); /* W3C */
+
+}
+
+#card textarea { margin:0px; width:100%; border:none; border-radius: none; font-size: 12pt; height: 110px;}
 #title {
 	position:relative;
 	margin: 8px auto 0px auto;
