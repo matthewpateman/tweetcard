@@ -140,24 +140,27 @@ header {
 	top:6px;
 	
 	height:30px;
-	width:47px;
-
+	width:60px;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 600;
 	cursor: pointer;
 		
-	border:1px solid #000;
-	border-radius:3px;
-	box-shadow: inset 0px 1px 1px rgba(255,255,255,0.3), inset 0px -1px 1px rgba(0,0,0,0.3);;
+	border:none;
+	border-radius:5px;
+	box-shadow: inset 0px 0px 3px rgba(0,0,0,0.5);
 	box-sizing:border-box;
 	margin:0px; 
-	padding:4px 5px;
+	padding:5px 5px;
 	outline: none;
 
 	font-size: 10pt;
-	font-weight: 400;
-	color: #999;
-	text-shadow:0px -1px 1px rgba(0,0,0,0.8);
+	font-weight: 600;
+
 	text-align: center;
 
+	float:right;
+	color: #FFF;
+	text-shadow:0px -1px 1px rgba(0,0,0,0.5);
 
 	background: #29c3ed; /* Old browsers */
 	background: -moz-linear-gradient(top, #29c3ed 30%, #0ab2e5 67%); /* FF3.6+ */
@@ -174,6 +177,27 @@ header {
 		position:fixed !important;
 	}
 
+#title {
+
+	height:28px;
+	width:40px;
+	margin: 8px auto 0px auto;
+	padding:0px;
+
+	position:relative;
+
+	border:none;
+
+	font-size: 20px;
+	font-weight:600;
+	text-shadow:0px -1px 1px rgba(0,0,0,0.8);
+	color:#FFF;
+	letter-spacing:1px;
+
+}
+
+/* Tweet Card & Blackout */
+
 #blackout {
 
 	background-color: rgba(0,0,0,0.5);
@@ -181,8 +205,8 @@ header {
 	height: 100%;
 	position: fixed;
 	z-index: 400;
-
 }
+
 #card {
 
 	width:308px;
@@ -194,50 +218,55 @@ header {
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 	position: fixed;
 	z-index:500;
-	top:54px;
+	top:-200px;
 	margin-left:-155px;
 	left:50%;
 	overflow:hidden;
 
+	transition: top 0.5s;
+	-moz-transition: top 0.5s; /* Firefox 4 */
+	-webkit-transition: top 0.5s; /* Safari and Chrome */
+	-o-transition: top 0.5s; /* Opera */
+
 }
 
+.cardShow {
 
+	top:54px !important;
 
-#card #header {height:43px; width: 100%; 
+}
+
+#card #header {
+
+	height:43px;
+	width: 100%; 
 	box-sizing:border-box;
 	padding:5px;
 	background:url('img/red-line.png') repeat-x bottom left;
+
 }
 
 #card input {
-
-	-webkit-appearance: none;
-
-}
-#card #cancel, #card #send {
 	
 	height:30px;
 	width:60px;
-	font-family: 'Helvetica Neue', sans-serif;
-	font-weight: 600;
+	margin:0px; 
+	padding:4px 5px;
+	box-sizing:border-box;
+
 	cursor: pointer;
-		
+
 	border:none;
 	border-radius:5px;
 	box-shadow: inset 0px 0px 3px rgba(0,0,0,0.5);
-	box-sizing:border-box;
-	margin:0px; 
-	padding:4px 5px;
-	outline: none;
 
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 600;
 	font-size: 10pt;
 	font-weight: 600;
-
-
 	text-align: center;
 
-
-
+	outline: none;
 }
 
 #card #cancel {
@@ -245,6 +274,7 @@ header {
 	float:left;
 	color: #666;
 	text-shadow:0px 1px 1px rgba(255,255,255,1);
+
 }
 
 #card #send {
@@ -264,40 +294,38 @@ header {
 }
 
 #card textarea {
+
+	width:100%;
+	height: 110px;
 	margin:0px;
-	box-sizing:border-box;
 	padding:0px 5px;
+	box-sizing:border-box;
 	resize: none;
-	width:100%; border:none; border-radius: none; font-size: 12pt; height: 110px;
+
+	border:none;
+	border-radius: none; 
 	background-color: #F5F5F5;
 	background: url('img/lines.png') repeat;
-	line-height: 1.7;
+
 	outline: none;
+
 	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 12pt; 
+	color:#000;
+	line-height: 1.7;
 
 }
 
-#card #number {float:right; padding:7px 10px 5px 5px;
+#card #number {
 
-	color: #666;
-	text-shadow:0px 1px 1px rgba(255,255,255,1);
+	padding:7px 10px 5px 5px;
+	float:right; 
 	font-family: 'Helvetica Neue', sans-serif;
 	font-weight: 600;
 	font-size: 10pt;
+	color: #666;
+	text-shadow:0px 1px 1px rgba(255,255,255,1);
 
 }
-#title {
-	position:relative;
-	margin: 8px auto 0px auto;
-	height:28px; width:40px;
-	border:none;
-	padding:0px;
-	font-size:16px;
 
-	font-size: 20px;
-	font-weight:600;
-	text-shadow:0px -1px 1px rgba(0,0,0,0.8);
-	color:#FFF;
-	letter-spacing:1px;
-
-}
+/* END Tweet Card & Blackout */
